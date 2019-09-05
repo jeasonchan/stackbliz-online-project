@@ -1,0 +1,18 @@
+<h2>My Heroes</h2>
+<ul>
+  <li *ngFor="let everyHero of HEROES">
+    <span class="badge">{{everyHero.id}}</span>  {{everyHero.name}}  <!--span的样式使用css中定义的"badge"样式，还可以使用"main"样式，就是用“*”代表的样式-->
+  </li>
+</ul>
+
+
+
+<h2>{{hero.name|uppercase}}<!--直接显示脚本中的某个变量-->  Details</h2>  <!--使用管道操作符格式化字符串、金额、日期-->
+<div><span>id:</span>{{hero.id}}</div>
+<div><span>name:</span>{{hero.name}}</div>
+
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name">  <!--双向数据绑定操作，输入的内容和hero的name属性绑定-->
+  </label>
+</div>
